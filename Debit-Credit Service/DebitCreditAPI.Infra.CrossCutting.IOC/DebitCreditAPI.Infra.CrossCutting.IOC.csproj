@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="5.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DebitCreditAPI.Application\DebitCreditAPI.Application.csproj" />
+    <ProjectReference Include="..\DebitCreditAPI.Domain.Services\DebitCreditAPI.Domain.Services.csproj" />
+    <ProjectReference Include="..\DebitCreditAPI.Infra.Repository\DebitCreditAPI.Infra.Repository.csproj" />
+  </ItemGroup>
+
+</Project>
