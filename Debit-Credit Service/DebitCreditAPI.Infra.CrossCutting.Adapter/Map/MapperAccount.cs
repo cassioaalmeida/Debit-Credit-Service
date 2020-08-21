@@ -25,28 +25,27 @@ namespace DebitCreditAPI.Infra.CrossCutting.Adapter.Map
             {
                 Id = accountDTO.Id,
                 AccountNumber = accountDTO.AccountNumber,
-                Balance = accountDTO.Balance,
-                OriginEntries = mapperEntry.MapperListEntriesEntity(accountDTO.OriginEntries),
-                DestinyEntries = mapperEntry.MapperListEntriesEntity(accountDTO.DestinyEntries)
+                Balance = accountDTO.Balance
             };
 
             return account;
         }
         public IEnumerable<AccountDTO> MapperListAccounts(IEnumerable<Account> accounts)
         {
-            foreach (var item in accounts)
-            {
-                AccountDTO accountDTO = new AccountDTO
+            if (accounts != null)
+                foreach (var item in accounts)
                 {
-                    Id = item.Id,
-                    AccountNumber = item.AccountNumber,
-                    Balance = item.Balance,
-                    DestinyEntries = mapperEntry.MapperListEntries(item.DestinyEntries).ToList(),
-                    OriginEntries = mapperEntry.MapperListEntries(item.OriginEntries).ToList()
-                };
+                    AccountDTO accountDTO = new AccountDTO
+                    {
+                        Id = item.Id,
+                        AccountNumber = item.AccountNumber,
+                        Balance = item.Balance,
+                        DestinyEntries = mapperEntry.MapperListEntries(item.DestinyEntries).ToList(),
+                        OriginEntries = mapperEntry.MapperListEntries(item.OriginEntries).ToList()
+                    };
 
-                accountDTOs.Add(accountDTO);
-            }
+                    accountDTOs.Add(accountDTO);
+                }
             return accountDTOs;
         }
 

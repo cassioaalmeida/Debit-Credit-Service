@@ -35,8 +35,8 @@ namespace DebitCreditAPI.Application.Service
 
         public IEnumerable<EntryDTO> GetAll()
         {
-            var objProdutos = _serviceEntry.GetAll();
-            return _mapperEntry.MapperListEntries(objProdutos);
+            var objEntries = _serviceEntry.GetAll();
+            return _mapperEntry.MapperListEntries(objEntries);
         }
 
         public EntryDTO GetById(int id)

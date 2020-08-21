@@ -18,5 +18,7 @@ namespace DebitCreditAPI.Application.Interfaces
         void Remove(AccountDTO obj);
 
         void Dispose();
+        AccountDTO GetAccountByAccountNumber(int accountNumber);
+        IEnumerable<AccountDTO> GetAllWithChilds();
     }
 }

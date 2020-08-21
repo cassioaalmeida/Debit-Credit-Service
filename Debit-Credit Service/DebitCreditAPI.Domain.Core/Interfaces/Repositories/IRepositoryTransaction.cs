@@ -5,9 +5,8 @@ using System.Text;
 
 namespace DebitCreditAPI.Domain.Core.Interfaces.Repositories
 {
-    public interface IRepositoryAccount : IRepositoryBase<Account>
+    public interface IRepositoryTransaction
     {
-        Account GetAccountByAccountNumber(int accountNumber);
-        IEnumerable<Account> GetAllWithChilds();
+        void CreateTransaction(Account origin, Account destiny, Entry entry);
     }
 }

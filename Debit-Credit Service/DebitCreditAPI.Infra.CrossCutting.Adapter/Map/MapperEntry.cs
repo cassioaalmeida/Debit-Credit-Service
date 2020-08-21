@@ -31,34 +31,38 @@ namespace DebitCreditAPI.Infra.CrossCutting.Adapter.Map
         }
         public IEnumerable<EntryDTO> MapperListEntries(IEnumerable<Entry> entries)
         {
-            foreach (var item in entries)
-            {
-                EntryDTO entryDTO = new EntryDTO
+            entryDTOs = new List<EntryDTO>();
+            if (entries !=null)
+                foreach (var item in entries)
                 {
-                    Id = item.Id,
-                    Value = item.Value,
-                    OriginAccountId = item.OriginAccountId,
-                    DestinyAccountId = item.DestinyAccountId
-                };
+                    EntryDTO entryDTO = new EntryDTO
+                    {
+                        Id = item.Id,
+                        Value = item.Value,
+                        OriginAccountId = item.OriginAccountId,
+                        DestinyAccountId = item.DestinyAccountId
+                    };
 
-                entryDTOs.Add(entryDTO);
-            }
+                    entryDTOs.Add(entryDTO);
+                }
             return entryDTOs;
         }
         public IEnumerable<Entry> MapperListEntriesEntity(IEnumerable<EntryDTO> entryDTOs)
         {
-            foreach (var item in entryDTOs)
-            {
-                Entry entry = new Entry
+            entries = new List<Entry>();
+            if (entryDTOs != null)
+                foreach (var item in entryDTOs)
                 {
-                    Id = item.Id,
-                    Value = item.Value,
-                    OriginAccountId = item.OriginAccountId,
-                    DestinyAccountId = item.DestinyAccountId
-                };
+                    Entry entry = new Entry
+                    {
+                        Id = item.Id,
+                        Value = item.Value,
+                        OriginAccountId = item.OriginAccountId,
+                        DestinyAccountId = item.DestinyAccountId
+                    };
 
-                entries.Add(entry);
-            }
+                    entries.Add(entry);
+                }
             return entries;
         }
 

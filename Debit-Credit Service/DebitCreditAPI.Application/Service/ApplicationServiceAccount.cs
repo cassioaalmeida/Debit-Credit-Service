@@ -33,10 +33,23 @@ namespace DebitCreditAPI.Application.Service
             _serviceAccount.Dispose();
         }
 
+        public AccountDTO GetAccountByAccountNumber(int accountNumber)
+        {
+            var objAccount = _serviceAccount.GetAccountByAccountNumber(accountNumber);
+            return _mapperAccount.MapperToDTO(objAccount);
+        }
+
         public IEnumerable<AccountDTO> GetAll()
         {
-            var objProdutos = _serviceAccount.GetAll();
-            return _mapperAccount.MapperListAccounts(objProdutos);
+            var objAccount = _serviceAccount.GetAll();
+            return _mapperAccount.MapperListAccounts(objAccount);
+        }
+
+        public IEnumerable<AccountDTO> GetAllWithChilds()
+        {
+            var objAccount = _serviceAccount.GetAllWithChilds();
+
+            return _mapperAccount.MapperListAccounts(objAccount);
         }
 
         public AccountDTO GetById(int id)

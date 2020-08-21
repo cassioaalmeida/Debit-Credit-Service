@@ -16,5 +16,22 @@ namespace DebitCreditAPI.Domain.Services.Services
         {
             _repositoryAccount = RepositoryAccount;
         }
+        public override void Add(Account obj)
+        {
+            if (_repositoryAccount.GetAccountByAccountNumber(obj.AccountNumber) == null)
+                _repositoryAccount.Add(obj);
+            else
+                throw new Exception("Account Number already exists!");
+        }
+
+        public Account GetAccountByAccountNumber(int accountNumber)
+        {
+            return _repositoryAccount.GetAccountByAccountNumber(accountNumber);
+        }
+
+        public IEnumerable<Account> GetAllWithChilds()
+        {
+            return _repositoryAccount.GetAllWithChilds();
+        }
     }
 }

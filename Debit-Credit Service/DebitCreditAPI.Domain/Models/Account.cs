@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
+using System.Linq;
 
 namespace DebitCreditAPI.Domain.Models
 {
@@ -9,9 +10,7 @@ namespace DebitCreditAPI.Domain.Models
     {
         public int AccountNumber { get; set; }
         public decimal Balance { get; set; }
-        [InverseProperty("OriginAccount")]
         public virtual IEnumerable<Entry> OriginEntries { get; set; }
-        [InverseProperty("DestinyAccount")]
         public virtual IEnumerable<Entry> DestinyEntries { get; set; }
     }
 }
