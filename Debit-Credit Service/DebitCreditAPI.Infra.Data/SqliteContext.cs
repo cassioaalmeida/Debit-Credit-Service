@@ -19,15 +19,18 @@ namespace DebitCreditAPI.Infra.Data
         public DbSet<Entry> Entries { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+
             modelBuilder.Entity<Entry>()
                 .HasOne(p => p.OriginAccount)
-                .WithMany(b => b.Entries)
+                .WithMany(b => b.OriginEntries)
                 .HasForeignKey(p => p.OriginAccountId);
 
             modelBuilder.Entity<Entry>()
                 .HasOne(p => p.DestinyAccount)
-                .WithMany(b => b.Entries)
-                .HasForeignKey(p => p.DestinyAccountId);
+                .WithMany(b => b.DestinyEntries)
+                .HasForeignKey(p => p.DestinyAccountId)
+                .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<Account>()
                 .HasIndex(p => p.AccountNumber)

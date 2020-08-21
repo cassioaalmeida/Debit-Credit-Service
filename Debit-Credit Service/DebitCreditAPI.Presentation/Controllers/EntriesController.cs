@@ -10,13 +10,13 @@ namespace DebitCreditAPI.Presentation.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-    public class AccountsController : ControllerBase
+    public class EntriesController : ControllerBase
     {
-        private readonly IApplicationServiceAccount _applicationServiceAccount;
+        private readonly IApplicationServiceEntry _applicationServiceEntry;
 
-        public AccountsController(IApplicationServiceAccount ApplicationServiceAccount)
+        public EntriesController(IApplicationServiceEntry ApplicationServiceEntry)
         {
-            _applicationServiceAccount = ApplicationServiceAccount;
+            _applicationServiceEntry = ApplicationServiceEntry;
         }
     }
 }

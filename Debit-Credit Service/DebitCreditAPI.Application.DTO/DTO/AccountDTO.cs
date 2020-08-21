@@ -9,6 +9,7 @@ namespace DebitCreditAPI.Application.DTO.DTO
         public int? Id { get; set; }
         public int AccountNumber { get; set; }
         public decimal Balance { get; set; }
-        public List<EntryDTO> Entries { get; set; }
+        public List<EntryDTO> OriginEntries { get; set; }
+        public List<EntryDTO> DestinyEntries { get; set; }
     }
 }
