@@ -45,7 +45,7 @@ namespace DebitCreditAPI.Presentation.Controllers
                                                                  new EntryDTO { DestinyAccountId = (int)DestinyAccount.Id, 
                                                                                 OriginAccountId = (int)OriginAccount.Id, 
                                                                                 Value = transactionDTO.Value });
-                return Ok("Account created successfully!");
+                return Ok("Transaction created successfully!");
             }
             catch (Exception ex)
             {

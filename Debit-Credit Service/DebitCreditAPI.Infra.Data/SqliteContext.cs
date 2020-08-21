@@ -21,15 +21,6 @@ namespace DebitCreditAPI.Infra.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<Account>()
-                .HasMany(p => p.OriginEntries)
-                .WithOne(b => b.OriginAccount)
-                .HasForeignKey(c => c.OriginAccountId);
-            modelBuilder.Entity<Account>()
-                .HasMany(p => p.DestinyEntries)
-                .WithOne(b => b.DestinyAccount)
-                .HasForeignKey(c => c.DestinyAccountId);
-
             modelBuilder.Entity<Entry>()
                 .HasOne(p => p.OriginAccount)
                 .WithMany(b => b.OriginEntries)
