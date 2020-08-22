@@ -21,19 +21,16 @@ namespace DebitCreditAPI.Infra.CrossCutting.IOC
 
             #region IOC Application
             builder.RegisterType<ApplicationServiceAccount>().As<IApplicationServiceAccount>();
-            builder.RegisterType<ApplicationServiceEntry>().As<IApplicationServiceEntry>();
             builder.RegisterType<ApplicationServiceTransaction>().As<IApplicationServiceTransaction>();
             #endregion
 
             #region IOC Services
             builder.RegisterType<ServiceAccount>().As<IServiceAccount>();
-            builder.RegisterType<ServiceEntry>().As<IServiceEntry>();
             builder.RegisterType<ServiceTransaction>().As<IServiceTransaction>();
             #endregion
 
             #region IOC Repositorys SQL
             builder.RegisterType<RepositoryAccount>().As<IRepositoryAccount>();
-            builder.RegisterType<RepositoryEntry>().As<IRepositoryEntry>();
             builder.RegisterType<RepositoryTransaction>().As<IRepositoryTransaction>();
             #endregion
 

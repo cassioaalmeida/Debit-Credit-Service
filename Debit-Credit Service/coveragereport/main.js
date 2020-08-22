@@ -225,7 +225,6 @@ var assemblies = [
     "name": "DebitCreditAPI.Application",
     "classes": [
       { "name": "DebitCreditAPI.Application.Service.ApplicationServiceAccount", "rp": "DebitCreditAPI.Application_ApplicationServiceAccount.html", "cl": 18, "ucl": 19, "cal": 37, "tl": 73, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
-      { "name": "DebitCreditAPI.Application.Service.ApplicationServiceEntry", "rp": "DebitCreditAPI.Application_ApplicationServiceEntry.html", "cl": 0, "ucl": 29, "cal": 29, "tl": 60, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
       { "name": "DebitCreditAPI.Application.Service.ApplicationServiceTransaction", "rp": "DebitCreditAPI.Application_ApplicationServiceTransaction.html", "cl": 15, "ucl": 0, "cal": 15, "tl": 36, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
     ]},
   {
@@ -251,7 +250,6 @@ var assemblies = [
     "classes": [
       { "name": "DebitCreditAPI.Domain.Services.Services.ServiceAccount", "rp": "DebitCreditAPI.Domain.Services_ServiceAccount.html", "cl": 15, "ucl": 0, "cal": 15, "tl": 37, "ct": "LineCoverage", "mc": "-", "cb": 2, "tb": 2, "lch": [], "bch": [], "hc": [] },
       { "name": "DebitCreditAPI.Domain.Services.Services.ServiceBase`1", "rp": "DebitCreditAPI.Domain.Services_ServiceBase_1.html", "cl": 4, "ucl": 18, "cal": 22, "tl": 43, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
-      { "name": "DebitCreditAPI.Domain.Services.Services.ServiceEntry", "rp": "DebitCreditAPI.Domain.Services_ServiceEntry.html", "cl": 0, "ucl": 4, "cal": 4, "tl": 20, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
       { "name": "DebitCreditAPI.Domain.Services.Services.ServiceTransaction", "rp": "DebitCreditAPI.Domain.Services_ServiceTransaction.html", "cl": 9, "ucl": 0, "cal": 9, "tl": 26, "ct": "LineCoverage", "mc": "-", "cb": 2, "tb": 2, "lch": [], "bch": [], "hc": [] },
     ]},
   {
@@ -263,7 +261,7 @@ var assemblies = [
   {
     "name": "DebitCreditAPI.Infra.CrossCutting.IOC",
     "classes": [
-      { "name": "DebitCreditAPI.Infra.CrossCutting.IOC.ConfigurationIOC", "rp": "DebitCreditAPI.Infra.CrossCutting.IOC_ConfigurationIOC.html", "cl": 0, "ucl": 13, "cal": 13, "tl": 49, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
+      { "name": "DebitCreditAPI.Infra.CrossCutting.IOC.ConfigurationIOC", "rp": "DebitCreditAPI.Infra.CrossCutting.IOC_ConfigurationIOC.html", "cl": 0, "ucl": 10, "cal": 10, "tl": 46, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
       { "name": "DebitCreditAPI.Infra.CrossCutting.IOC.ModuleIOC", "rp": "DebitCreditAPI.Infra.CrossCutting.IOC_ModuleIOC.html", "cl": 0, "ucl": 3, "cal": 3, "tl": 19, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
     ]},
   {
@@ -278,14 +276,12 @@ var assemblies = [
     "classes": [
       { "name": "DebitCreditAPI.Infra.Repository.Repositories.RepositoryAccount", "rp": "DebitCreditAPI.Infra.Repository_RepositoryAccount.html", "cl": 10, "ucl": 0, "cal": 10, "tl": 31, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
       { "name": "DebitCreditAPI.Infra.Repository.Repositories.RepositoryBase`1", "rp": "DebitCreditAPI.Infra.Repository_RepositoryBase_1.html", "cl": 10, "ucl": 30, "cal": 40, "tl": 84, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
-      { "name": "DebitCreditAPI.Infra.Repository.Repositories.RepositoryEntry", "rp": "DebitCreditAPI.Infra.Repository_RepositoryEntry.html", "cl": 0, "ucl": 4, "cal": 4, "tl": 20, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
       { "name": "DebitCreditAPI.Infra.Repository.Repositories.RepositoryTransaction", "rp": "DebitCreditAPI.Infra.Repository_RepositoryTransaction.html", "cl": 24, "ucl": 4, "cal": 28, "tl": 56, "ct": "LineCoverage", "mc": "-", "cb": 4, "tb": 4, "lch": [], "bch": [], "hc": [] },
     ]},
   {
     "name": "DebitCreditAPI.Presentation",
     "classes": [
       { "name": "DebitCreditAPI.Presentation.Controllers.AccountsController", "rp": "DebitCreditAPI.Presentation_AccountsController.html", "cl": 17, "ucl": 0, "cal": 17, "tl": 45, "ct": "LineCoverage", "mc": "-", "cb": 2, "tb": 2, "lch": [], "bch": [], "hc": [] },
-      { "name": "DebitCreditAPI.Presentation.Controllers.EntriesController", "rp": "DebitCreditAPI.Presentation_EntriesController.html", "cl": 0, "ucl": 4, "cal": 4, "tl": 22, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
       { "name": "DebitCreditAPI.Presentation.Controllers.TransactionsController", "rp": "DebitCreditAPI.Presentation_TransactionsController.html", "cl": 24, "ucl": 0, "cal": 24, "tl": 53, "ct": "LineCoverage", "mc": "-", "cb": 6, "tb": 6, "lch": [], "bch": [], "hc": [] },
       { "name": "DebitCreditAPI.Presentation.Program", "rp": "DebitCreditAPI.Presentation_Program.html", "cl": 0, "ucl": 5, "cal": 5, "tl": 24, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
       { "name": "DebitCreditAPI.Presentation.Startup", "rp": "DebitCreditAPI.Presentation_Startup.html", "cl": 0, "ucl": 31, "cal": 31, "tl": 77, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 2, "lch": [], "bch": [], "hc": [] },
