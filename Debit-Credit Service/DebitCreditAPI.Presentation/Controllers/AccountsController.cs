@@ -26,14 +26,15 @@ namespace DebitCreditAPI.Presentation.Controllers
             return Ok(_applicationServiceAccount.GetAllWithChilds());
         }
         [HttpPost]
-        public ActionResult CreateAccount([FromBody] AccountDTO accountDTO)
+        public ActionResult CreateAccount([FromBody] AccDTO accDTO)
         {
             try
             {
-                if (accountDTO == null)
+                if (accDTO == null)
                     return NotFound();
 
-                _applicationServiceAccount.Add(accountDTO);
+                _applicationServiceAccount.Add(
+                    new AccountDTO {AccountNumber= accDTO.AccountNumber, Balance = accDTO.Balance });
                 return Ok("Account created successfully!");
             }
             catch (Exception ex)

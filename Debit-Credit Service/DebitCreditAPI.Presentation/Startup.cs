@@ -43,30 +43,22 @@ namespace DebitCreditAPI.Presentation
 
             services.AddAutofac();
 
-            //services.AddSwaggerGen(c =>
-            //{
-            //    c.SwaggerDoc("v1", new Info
-            //    {
-            //        Version = "v1",
-            //        Title = "Swagger Implementation",
-            //        Description = "Available Web APIs",
-            //        TermsOfService = "None"
-            //    });
-            //});
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
+                {
+                    Version = "v1",
+                    Title = "Debit Credit API Implementation",
+                    Description = "Available Web APIs"
+                });
+                
+            });
 
-            // create a Autofac container builder
             var builder = new ContainerBuilder();
-
-            // read service collection to Autofac
             builder.Populate(services);
-
-            // use and configure Autofac
             builder.RegisterModule(new ModuleIOC());
-
-            // build the Autofac container
             ApplicationContainer = builder.Build();
 
-            // creating the IServiceProvider out of the Autofac container
             return new AutofacServiceProvider(ApplicationContainer);
         }
 
@@ -79,6 +71,12 @@ namespace DebitCreditAPI.Presentation
             }
 
             app.UseMvc();
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "API V1");
+            });
         }
 
         public void ConfigureContainer(ContainerBuilder builder)

@@ -22,7 +22,7 @@ namespace DebitCreditAPI.Test.Tests
         [Fact]
         public void CreateAccount()
         {
-            AccountDTO account = new AccountDTO
+            AccDTO account = new AccDTO
             {
                 AccountNumber = Util.Util.RandomNumber(100000, 999999),
                 Balance = 0
@@ -41,7 +41,7 @@ namespace DebitCreditAPI.Test.Tests
         [Fact]
         public void CreateNullAccount()
         {
-            AccountDTO account = null;
+            AccDTO account = null;
 
             var actionResult = _testAccount.accountsController.CreateAccount(account);
 
@@ -51,7 +51,7 @@ namespace DebitCreditAPI.Test.Tests
         [Fact]
         public void CreateDuplicateAccount()
         {
-            AccountDTO account = new AccountDTO
+            AccDTO account = new AccDTO
             {
                 AccountNumber = Util.Util.RandomNumber(100000, 999999),
                 Balance = 0

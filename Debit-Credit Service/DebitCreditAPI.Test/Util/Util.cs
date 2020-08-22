@@ -38,19 +38,19 @@ namespace DebitCreditAPI.Test.Util
         }
         public static void LoadAccounts(TestAccountConfig _testAccount)
         {
-            AccountDTO account1 = new AccountDTO
+            AccDTO account1 = new AccDTO
             {
                 AccountNumber = 100,
                 Balance = 100
             };
             _testAccount.accountsController.CreateAccount(account1);
-            AccountDTO account2 = new AccountDTO
+            AccDTO account2 = new AccDTO
             {
                 AccountNumber = 200,
                 Balance = 100
             };
             _testAccount.accountsController.CreateAccount(account2);
-            AccountDTO account3 = new AccountDTO
+            AccDTO account3 = new AccDTO
             {
                 AccountNumber = 300,
                 Balance = 100
