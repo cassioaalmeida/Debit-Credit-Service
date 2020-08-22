@@ -14,15 +14,12 @@ namespace DebitCreditAPI.Presentation.Controllers
     public class TransactionsController : ControllerBase
     {
         private readonly IApplicationServiceAccount _applicationServiceAccount;
-        private readonly IApplicationServiceEntry _applicationServiceEntry;
         private readonly IApplicationServiceTransaction _applicationServiceTransaction;
 
-        public TransactionsController(IApplicationServiceEntry ApplicationServiceEntry,
-                                      IApplicationServiceAccount ApplicationServiceAccount,
+        public TransactionsController(IApplicationServiceAccount ApplicationServiceAccount,
                                       IApplicationServiceTransaction ApplicationServiceTransaction)
         {
             _applicationServiceAccount = ApplicationServiceAccount;
-            _applicationServiceEntry = ApplicationServiceEntry;
             _applicationServiceTransaction = ApplicationServiceTransaction;
         }
 

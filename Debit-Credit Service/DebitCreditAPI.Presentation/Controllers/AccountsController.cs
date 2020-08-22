@@ -21,7 +21,7 @@ namespace DebitCreditAPI.Presentation.Controllers
         }
 
         [HttpGet]
-        public ActionResult<AccountDTO> GetAccounts()
+        public ActionResult<IEnumerable<AccountDTO>> GetAccounts()
         {
             return Ok(_applicationServiceAccount.GetAllWithChilds());
         }

@@ -21,6 +21,8 @@ namespace DebitCreditAPI.Infra.CrossCutting.Adapter.Map
         #region Methods
         public Account MapperToEntity(AccountDTO accountDTO)
         {
+            if (accountDTO == null)
+                return null;
             Account account = new Account
             {
                 Id = accountDTO.Id,
@@ -51,6 +53,8 @@ namespace DebitCreditAPI.Infra.CrossCutting.Adapter.Map
 
         public AccountDTO MapperToDTO(Account Account)
         {
+            if (Account == null)
+                return null;
             AccountDTO accountDTO = new AccountDTO
             {
                 Id = Account.Id,

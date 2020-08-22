@@ -80,7 +80,5 @@ namespace DebitCreditAPI.Infra.Repository.Repositories
         {
             _context.Dispose();
         }
-
-
     }
 }

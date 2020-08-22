@@ -19,6 +19,8 @@ namespace DebitCreditAPI.Infra.CrossCutting.Adapter.Map
         #region Methods
         public Entry MapperToEntity(EntryDTO entryDTO)
         {
+            if (entryDTO == null)
+                return null;
             Entry entry = new Entry
             {
                 Id = entryDTO.Id,
@@ -68,6 +70,8 @@ namespace DebitCreditAPI.Infra.CrossCutting.Adapter.Map
 
         public EntryDTO MapperToDTO(Entry Entry)
         {
+            if (Entry == null)
+                return null;
             EntryDTO entryDTO = new EntryDTO
             {
                 Id = Entry.Id,

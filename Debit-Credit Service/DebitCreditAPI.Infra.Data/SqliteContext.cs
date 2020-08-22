@@ -31,10 +31,6 @@ namespace DebitCreditAPI.Infra.Data
                 .WithMany(b => b.DestinyEntries)
                 .HasForeignKey(c => c.DestinyAccountId)
                 .OnDelete(DeleteBehavior.Restrict);
-
-            modelBuilder.Entity<Account>()
-                .HasIndex(p => p.AccountNumber)
-                .IsUnique();
         }
     }
 }

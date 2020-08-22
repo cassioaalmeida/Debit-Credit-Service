@@ -26,8 +26,19 @@ namespace DebitCreditAPI.Infra.Repository.Repositories
                     _context.Set<Entry>().Add(entry);
                     _context.SaveChanges();
 
+                    var local = _context.Set<Account>().Local.FirstOrDefault(a => a.Id.Equals(origin.Id));
+
+                    if (local != null)
+                        _context.Entry(local).State = EntityState.Detached;
+
                     _context.Entry(origin).State = EntityState.Modified;
                     _context.SaveChanges();
+
+
+                    local = _context.Set<Account>().Local.FirstOrDefault(a => a.Id.Equals(destiny.Id));
+
+                    if (local != null)
+                        _context.Entry(local).State = EntityState.Detached;
 
                     _context.Entry(destiny).State = EntityState.Modified;
                     _context.SaveChanges();
